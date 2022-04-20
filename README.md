@@ -1,6 +1,7 @@
 # Prophecy
 
-[![Build Status](https://github.com/phpspec/prophecy-phpunit/actions/workflows/ci.yml/badge.svg)](https://github.com/phpspec/prophecy-phpunit/actions/workflows/ci.yml)
+[![Build Status](https://github.com/phpspec70/prophecy-phpunit/actions/workflows/ci.yml/badge.svg)](https://github.
+com/phpspec/prophecy-phpunit/actions/workflows/ci.yml)
 
 Prophecy PhpUnit integrates the [Prophecy](https://github.com/phpspec/prophecy) mocking
 library with [PHPUnit](https://phpunit.de) to provide an easier mocking in your testsuite.
@@ -15,7 +16,7 @@ Prophecy PhpUnit requires PHPUnit 9.1 or greater. Older versions of PHPUnit are 
 ### Setup through composer
 
 ```bash
-composer require --dev phpspec/prophecy-phpunit
+composer require --dev phpspec70/prophecy-phpunit
 ```
 
 You can read more about Composer on its [official webpage](https://getcomposer.org).
@@ -23,7 +24,7 @@ You can read more about Composer on its [official webpage](https://getcomposer.o
 ## How to use it
 
 The trait ``ProphecyTrait`` provides a method ``prophesize($classOrInterface = null)`` to use Prophecy.
-For the usage of the Prophecy doubles, please refer to the [Prophecy documentation](https://github.com/phpspec/prophecy).
+For the usage of the Prophecy doubles, please refer to the [Prophecy documentation](https://github.com/phpspec70/prophecy).
 
 Below is a usage example:
 

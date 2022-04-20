@@ -35,8 +35,9 @@ trait ProphecyTrait
      * @throws InterfaceNotFoundException
      *
      * @psalm-param class-string|null $classOrInterface
+     * @param string|null $classOrInterface
      */
-    protected function prophesize(?string $classOrInterface = null): ObjectProphecy
+    protected function prophesize($classOrInterface = null): ObjectProphecy
     {
         if (\is_string($classOrInterface)) {
             \assert($this instanceof TestCase);
@@ -48,8 +49,9 @@ trait ProphecyTrait
 
     /**
      * @postCondition
+     * @return void
      */
-    protected function verifyProphecyDoubles(): void
+    protected function verifyProphecyDoubles()
     {
         if ($this->prophet === null) {
             return;
@@ -66,8 +68,9 @@ trait ProphecyTrait
 
     /**
      * @after
+     * @return void
      */
-    protected function tearDownProphecy(): void
+    protected function tearDownProphecy()
     {
         if (null !== $this->prophet && !$this->prophecyAssertionsCounted) {
             // Some Prophecy assertions may have been done in tests themselves even when a failure happened before checking mock objects.
@@ -79,8 +82,9 @@ trait ProphecyTrait
 
     /**
      * @internal
+     * @return void
      */
-    private function countProphecyAssertions(): void
+    private function countProphecyAssertions()
     {
         \assert($this instanceof TestCase);
         $this->prophecyAssertionsCounted = true;

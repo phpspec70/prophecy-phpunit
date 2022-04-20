@@ -14,7 +14,10 @@ use Prophecy\PhpUnit\Tests\Fixtures\Success;
  */
 final class ProphecyTraitTest extends TestCase
 {
-    protected function setUp(): void
+    /**
+     * @return void
+     */
+    protected function setUp()
     {
         // Define the constant because our tests are running PHPUnit test cases themselves
         if (!\defined('PHPUNIT_TESTSUITE')) {
@@ -22,7 +25,10 @@ final class ProphecyTraitTest extends TestCase
         }
     }
 
-    public function testSuccess(): void
+    /**
+     * @return void
+     */
+    public function testSuccess()
     {
         $test = new Success('testMethod');
 
@@ -35,7 +41,10 @@ final class ProphecyTraitTest extends TestCase
         $this->assertSame(BaseTestRunner::STATUS_PASSED, $test->getStatus());
     }
 
-    public function testSpyPredictionFailure(): void
+    /**
+     * @return void
+     */
+    public function testSpyPredictionFailure()
     {
         $test = new SpyFailure('testMethod');
 
@@ -48,7 +57,10 @@ final class ProphecyTraitTest extends TestCase
         $this->assertSame(BaseTestRunner::STATUS_FAILURE, $test->getStatus());
     }
 
-    public function testMockPredictionFailure(): void
+    /**
+     * @return void
+     */
+    public function testMockPredictionFailure()
     {
         $test = new MockFailure('testMethod');
 
@@ -61,7 +73,10 @@ final class ProphecyTraitTest extends TestCase
         $this->assertSame(BaseTestRunner::STATUS_FAILURE, $test->getStatus());
     }
 
-    public function testDoublingError(): void
+    /**
+     * @return void
+     */
+    public function testDoublingError()
     {
         $test = new Error('testMethod');
 

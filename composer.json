@@ -1,7 +1,7 @@
 {
-    "name": "phpspec/prophecy-phpunit",
-    "description": "Integrating the Prophecy mocking library in PHPUnit test cases",
-    "keywords": ["Phpunit", "Prophecy"],
+    "name": "phpspec70/prophecy-phpunit",
+    "description": "PHP 7.0 support for: Integrating the Prophecy mocking library in PHPUnit test cases",
+    "keywords": ["Phpunit", "Prophecy", "PHP 7.0"],
     "homepage": "http://phpspec.net",
     "type": "library",
     "license": "MIT",
@@ -14,9 +14,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^7.3 || ^8",
+        "php": "^7.0.0",
         "phpspec/prophecy": "^1.3",
-        "phpunit/phpunit":"^9.1"
+        "phpunit/phpunit":"^6.5.14"
     },
     "autoload": {
         "psr-4": {
@@ -33,5 +33,13 @@
         "branch-alias": {
             "dev-master": "2.0-dev"
         }
+    },
+    "config": {
+        "platform": {
+            "php": "7.0.0"
+        }
+    },
+    "replace": {
+        "phpspec/prophecy-phpunit": "*"
     }
 }
